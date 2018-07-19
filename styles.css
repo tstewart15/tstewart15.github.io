@@ -3,13 +3,14 @@ a {
 }
 
 a, button {
-	color: white;
-	background-color: #d32f2f;
+	color: black;
+	background-color: #ff1744;
+	font-weight: bold;
 	padding: 5px 10px;
 	border-radius: 3px;
 }
 a:hover, button:hover {
-	background-color: #9a0007;
+	background-color: #ff616f;
 }
 
 body {
