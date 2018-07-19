@@ -2,14 +2,14 @@ a {
 	text-decoration: none;
 }
 
-a, button {
+.button-link, button {
 	color: black;
 	background-color: #ff1744;
 	font-weight: bold;
 	padding: 5px 10px;
 	border-radius: 3px;
 }
-a:hover, button:hover {
+.button-link:hover, button:hover {
 	background-color: #ff616f;
 }
 
