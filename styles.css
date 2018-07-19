@@ -1,11 +1,17 @@
 body {
-  margin: 0;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Arimo';
-  font-size: 80px;
+	margin: 0;
+	font-family: 'Arimo';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	font-size: 80px;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
