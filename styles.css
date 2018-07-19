@@ -1,9 +1,25 @@
+a {
+	text-decoration: none;
+}
+
+a, button {
+	color: white;
+	background-color: #ff1744;
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+a:hover, button:hover {
+	background-color: #c4001d;
+}
+
 body {
 	margin: 0;
 	font-family: 'Arimo';
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #5c6bc0;
+	color: white;
 }
 
 h1 {
@@ -12,6 +28,7 @@ h1 {
 
 main {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
