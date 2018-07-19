@@ -6,5 +6,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Arimo';
   font-size: 80px;
 }
