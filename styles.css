@@ -3,13 +3,13 @@ a {
 }
 
 a, button {
-	color: white;
-	background-color: #ff1744;
+	color: black;
+	background-color: #f44336;
 	padding: 5px 10px;
 	border-radius: 3px;
 }
 a:hover, button:hover {
-	background-color: #c4001d;
+	background-color: #ff7961;
 }
 
 body {
