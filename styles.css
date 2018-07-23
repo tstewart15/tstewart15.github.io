@@ -2,14 +2,14 @@ a {
 	text-decoration: none;
 }
 
-.button-link, button {
+.button-link {
 	color: black;
 	background-color: #ff1744;
 	font-weight: bold;
 	padding: 5px 10px;
 	border-radius: 3px;
 }
-.button-link:hover, button:hover {
+.button-link:hover {
 	background-color: #ff616f;
 }
 
@@ -25,6 +25,7 @@ body {
 
 h1 {
 	font-size: 65px;
+	margin: 0;
 }
 
 main {
@@ -32,4 +33,13 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin: 60px 0;
+	padding: 0 20px;
+}
+main > *:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+p {
+	margin: 0;
 }
