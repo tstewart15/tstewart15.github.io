@@ -44,3 +44,8 @@ main > *:not(:last-child) {
 p {
 	margin: 0;
 }
+
+.profile-image {
+	border-radius: 50%;
+	border: 5px solid #ff1744;
+}
