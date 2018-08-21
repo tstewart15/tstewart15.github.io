@@ -9,14 +9,15 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #3f51b5;
+	/* background-color: #3f51b5; */
+	background-color: #222222;
 	color: white;
 }
 
 .button-container {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 }
 .button-container > * {
@@ -29,14 +30,18 @@ body {
 	color: black;
 	background-color: #ff1744;
 	padding: 5px 15px 5px 3px;
-	border-radius: 25px;
+	border-radius: 25px 5px 5px 25px;
 	height: 50px;
 	box-sizing: border-box;
 	font-weight: 500;
+	/* transition: transform 0.25s; */
 }
 .button:hover {
 	background-color: #ff616f;
 }
+/* .button:active {
+	transform: translateY(2px);
+} */
 /* .button:focus {
 	outline: 2px dashed white;
 }
