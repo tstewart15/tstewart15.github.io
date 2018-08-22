@@ -34,20 +34,20 @@ body {
 	height: 50px;
 	box-sizing: border-box;
 	font-weight: 500;
-	/* transition: transform 0.25s; */
 }
 .button:hover {
 	background-color: #ff616f;
 }
-/* .button:active {
-	transform: translateY(2px);
-} */
-/* .button:focus {
-	outline: 2px dashed white;
+.button:active {
+	transform: scale(0.94);
+}
+.button:focus {
+	outline: none;
+	box-shadow: 0 0 3px 1px white;
 }
 .button::-moz-focus-inner {
 	border: 0;
-} */
+}
 .button > :not(:last-child) {
 	margin-right: 10px;
 }
