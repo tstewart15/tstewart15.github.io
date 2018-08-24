@@ -42,7 +42,7 @@ body {
 }
 .button:focus {
 	outline: none;
-	box-shadow: 0 0 3px 1px white;
+	box-shadow: 0 0 0 2px white;
 }
 .button::-moz-focus-inner {
 	border: 0;
