@@ -28,9 +28,9 @@ body {
 	display: inline-flex;
 	align-items: center;
 	color: black;
-	background-color: #ff1744;
+	background-color: #00e6ae;
 	padding: 5px 15px 5px 3px;
-	border-radius: 25px 5px 5px 25px;
+	border-radius: 25px 0 0 25px;
 	height: 50px;
 	box-sizing: border-box;
 	font-weight: 500;
@@ -39,7 +39,7 @@ body {
 	background-color: #ff616f;
 }
 .button:active {
-	transform: scale(0.94);
+	transform: scale(0.96);
 }
 .button:focus {
 	outline: none;
@@ -82,6 +82,9 @@ h1 {
 	margin: 0;
 	text-align: center;
 	line-height: 1;
+	background-color: white;
+	color: #222222;
+	padding: 10px;
 }
 
 h2 {
@@ -103,7 +106,8 @@ header > :not(:last-child) {
 
 p {
 	margin: 0;
-	line-height: 1;
+	line-height: 1.3;
+	text-align: center;
 }
 
 .profile-image {
