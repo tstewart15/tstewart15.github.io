@@ -7,10 +7,9 @@ body {
 	font-family: 'Fira Sans', sans-serif;
 	font-size: 18px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	background-color: #222222;
 	color: white;
+	height: 100vh;
 }
 
 .button-container {
@@ -70,6 +69,7 @@ body {
 	flex-direction: column;
 	padding: 60px 20px;
 	max-width: 500px;
+	margin: auto;
 }
 .content-wrapper > :not(:last-child) {
 	margin-bottom: 30px;
