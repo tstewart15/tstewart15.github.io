@@ -6,7 +6,152 @@
 		<meta name='theme-color' content='#00e6ae'>
 		<meta name='description' content='Tom Stewart, Web Developer'>
 		<title>Tom Stewart</title>
-		<link rel='stylesheet' href='/styles.css'>
+		<!-- <link rel='stylesheet' href='/styles.css'> -->
+		<style>
+			body {
+				margin: 0;
+				font-family: 'Fira Sans', sans-serif;
+				font-size: 18px;
+				display: flex;
+				background-color: #222222;
+				color: white;
+				height: 100vh;
+			}
+
+			.button-container {
+				align-self: stretch;
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+				grid-gap: 4px;
+			}
+
+			.button {
+				display: inline-flex;
+				align-items: center;
+				color: black;
+				background-color: #00e6ae;
+				padding: 5px 10px;
+				height: 40px;
+				box-sizing: border-box;
+				font-weight: 500;
+				text-decoration: none;
+			}
+			.button:hover {
+				background-color: #ff616f;
+			}
+			.button:active {
+				transform: scale(0.96);
+			}
+			.button:focus {
+				outline: none;
+				box-shadow: 0 0 0 1px white;
+			}
+			.button::-moz-focus-inner {
+				border: 0;
+			}
+			.button > :not(:last-child) {
+				margin-right: 10px;
+			}
+			.button-label {
+				flex: 1;
+				min-width: 0;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+			.button-svg {
+				height: 22px;
+				width: 22px;
+				flex-shrink: 0;
+			}
+
+			.content-wrapper {
+				display: flex;
+				flex-direction: column;
+				padding: 60px 20px;
+				max-width: 475px;
+				margin: auto;
+			}
+			.content-wrapper > :not(:last-child) {
+				margin-bottom: 60px;
+			}
+
+			dd, dl, dt {
+				margin: 0;
+			}
+			dt {
+				margin-bottom: 10px;
+			}
+			dd:not(:last-child) {
+				margin-bottom: 15px;
+			}
+
+			h1 {
+				font-size: 55px;
+				font-weight: 500;
+				margin: 0;
+				text-align: center;
+				line-height: 1;
+				background-color: white;
+				color: #222222;
+				padding: 10px;
+			}
+
+			h2 {
+				font-size: 35px;
+				font-weight: 500;
+				margin: 0;
+				text-align: center;
+				line-height: 1;
+			}
+
+			h3 {
+				font-size: 28px;
+				font-weight: 400;
+				margin: 0;
+				line-height: 1.3;
+			}
+
+			header {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			header > :not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			.link {
+				color: #00e6ae;
+			}
+			.link:hover {
+				color: #ff616f;
+			}
+			.link:focus {
+				outline: 1px solid white;
+				outline-offset: 3px;
+			}
+
+			p {
+				margin: 0;
+				line-height: 1.3;
+				text-align: center;
+			}
+
+			.profile-image {
+				border-radius: 50%;
+				border: 3px solid white;
+			}
+
+			section {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			section > :not(:last-child) {
+				margin-bottom: 20px;
+			}
+		</style>
 		<link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,500' rel='stylesheet'>
 		<link rel='manifest' href='/manifest.json'>
 	</head>
@@ -53,10 +198,10 @@
 			</defs>
 		</svg>
 		<div class='content-wrapper'>
-			<header>
+			<section>
 				<h1>Tom Stewart</h1>
 				<img src='/profile.jpg' alt='Tom Stewart' height='200' class='profile-image' />
-				<p>Hello! I'm a web developer, passionate about delivering performant, accessible, and aesthetic experiences.</p>
+				<p>Hi, I'm Tom. 👋 I love problem solving and creating things to help other people solve their problems. 🤓 Currently, I'm a web developer, passionate about delivering performant, accessible, and aesthetic experiences. 🔥</p>
 				<div class='button-container'>
 					<a class='button' href='mailto:tstewart8692@gmail.com'>
 						<svg class='button-svg'><use xlink:href="#icon-email"></use></svg>
@@ -67,9 +212,21 @@
 						<span class='button-label'>download resume</span>
 					</a>
 				</div>
-			</header>
+			</section>
 			<section>
-				<h2>Find me on...</h2>
+				<h2>Projects</h2>
+				<dl>
+					<dt><h3><a class="link" href='https://teacheradvisor.org'>teacheradvisor.org</a> (IBM)</h3></dt>
+					<dd><i>Web developer&nbsp;&nbsp;&middot;&nbsp;&nbsp;February 2017 - Present</i></dd>
+					<dd>Teacher Advisor is a free tool for teachers to discover lesson plans, strategies, and classroom activities, utilizing an AI-powered search.</dd>
+					<dt><h3><a class="link" href='https://www.ibm.com/us-en/marketplace/ibm-tririga'>TRIRIGA</a> (IBM)</h3></dt>
+					<dd><i>Web UI developer&nbsp;&nbsp;&middot;&nbsp;&nbsp;June 2015 - February 2017</i></dd>
+					<dd><i>Application developer&nbsp;&nbsp;&middot;&nbsp;&nbsp;June 2014 - June 2015</i></dd>
+					<dd>TRIRIGA is an application builder used by businesses for facility, employee, and energy management.</dd>
+				</dl>
+			</section>
+			<section>
+				<h2>Socials</h2>
 				<div class='button-container'>
 					<a class='button' href='https://www.codecademy.com/tjs352'>
 						<svg class='button-svg'><use xlink:href="#icon-codecademy"></use></svg>
@@ -102,5 +259,6 @@
 				</div>
 			</section>
 		</div>
+		<!-- <script src='/buttonKeyShortcuts.js' defer></script> -->
 	</body>
 </html>
