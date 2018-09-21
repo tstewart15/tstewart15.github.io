@@ -30,7 +30,7 @@ body {
 	background-color: #ff616f;
 }
 .button:active {
-	transform: scale(0.96);
+	background-color: #e64856;
 }
 .button:focus {
 	outline: none;
