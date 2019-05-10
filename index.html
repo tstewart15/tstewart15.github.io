@@ -12,9 +12,8 @@
 				font-family: 'Fira Sans', sans-serif;
 				font-size: 20px;
 				display: flex;
-				background-color: #222222;
+				background-color: #222;
 				color: white;
-				height: 100vh;
 			}
 
 			.button-container {
@@ -67,7 +66,7 @@
 			.content-wrapper {
 				display: flex;
 				flex-direction: column;
-				padding: 60px 20px;
+				padding: 60px 30px;
 				max-width: 475px;
 				margin: auto;
 			}
@@ -92,7 +91,7 @@
 				text-align: center;
 				line-height: 1;
 				background-color: white;
-				color: #222222;
+				color: #222;
 				padding: 10px;
 			}
 
@@ -149,6 +148,33 @@
 			section > :not(:last-child) {
 				margin-bottom: 20px;
 			}
+
+			.tiles-container {
+				flex: 1;
+				min-width: 0px;
+				padding: 10px;
+				display: grid;
+				grid-gap: 10px;
+				grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+				grid-template-rows: repeat(auto-fit, minmax(60px, 1fr));
+			}
+
+			.tile {
+				transition: background-color 1s;
+			}
+			.tile:hover {
+				background-color: transparent !important;
+			}
+
+			@media (max-width: 540px) {
+				.content-wrapper {
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+				.tiles-container {
+					display: none;
+				}
+			}
 		</style>
 		<link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,500' rel='stylesheet'>
 		<link rel='manifest' href='/manifest.json'>
@@ -190,6 +216,7 @@
 				</symbol>
 			</defs>
 		</svg>
+		<a class='tiles-container' href='https://codepen.io/tstewart8692/pen/MdWaqQ'></a>
 		<div class='content-wrapper'>
 			<section>
 				<h1>Tom Stewart</h1>
@@ -251,6 +278,7 @@
 				</div>
 			</section>
 		</div>
-		<!-- <script src='/buttonKeyShortcuts.js' defer></script> -->
+		<a class='tiles-container' href='https://codepen.io/tstewart8692/pen/MdWaqQ'></a>
+		<script src='/scripts/color-tiles.js' defer></script>
 	</body>
 </html>
