@@ -50,7 +50,7 @@
 
   function createTileElement() {
     const tile = document.createElement('div');
-    tile.style.backgroundColor = generateRandomCSSColor();
+    tile.style.backgroundColor = getRandomCSSColor();
     tile.classList.add('tile');
     return tile;
   }
@@ -82,17 +82,17 @@
   }
 
   function randomizeTileColor(tile) {
-    tile.style.backgroundColor = generateRandomCSSColor();
+    tile.style.backgroundColor = getRandomCSSColor();
   }
 
-  function generateRandomCSSColor() {
-    const r = generateRandomRGBValue();
-    const g = generateRandomRGBValue();
-    const b = generateRandomRGBValue();
+  function getRandomCSSColor() {
+    const r = getRandomRGBValue();
+    const g = getRandomRGBValue();
+    const b = getRandomRGBValue();
     return `rgb(${r},${g},${b})`;
   }
 
-  function generateRandomRGBValue() {
+  function getRandomRGBValue() {
     return Math.floor(Math.random() * 256);
   }
 })();
