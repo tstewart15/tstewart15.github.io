@@ -8,8 +8,8 @@
   const $contentWrapper = document.querySelector('.content-wrapper');
 
   const GRID_GAP = 10;
-  const MIN_COL_WIDTH = 100;
-  const MIN_ROW_HEIGHT = 60;
+  const MIN_COL_WIDTH = 120;
+  const MIN_ROW_HEIGHT = 80;
   const CHANGE_COLORS_INTERVAL_DURATION = 8000;
 
   const tileElementPool = [];
