@@ -57,17 +57,17 @@
 
   function getNumberOfTilesToFillUpGrid() {
     const {
-      offsetHeight: contentHeight,
       offsetWidth: contentWidth,
     } = $contentWrapper;
     const {
       innerWidth: windowWidth,
+      innerHeight: windowHeight,
     } = window;
 
     if (contentWidth < windowWidth) {
       const marginWidth = (windowWidth - contentWidth) / 2;
       const numColumns = Math.floor((marginWidth - GRID_GAP) / (MIN_COL_WIDTH + GRID_GAP)) * 2;
-      const numRows = Math.floor((contentHeight - GRID_GAP) / (MIN_ROW_HEIGHT + GRID_GAP));
+      const numRows = Math.floor((windowHeight - GRID_GAP) / (MIN_ROW_HEIGHT + GRID_GAP));
       const numTiles = numColumns * numRows;
       return numTiles;
     } else {

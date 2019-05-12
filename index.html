@@ -11,7 +11,6 @@
 				margin: 0;
 				font-family: 'Fira Sans', sans-serif;
 				font-size: 20px;
-				display: flex;
 				background-color: #222;
 				color: white;
 			}
@@ -67,7 +66,8 @@
 				display: flex;
 				flex-direction: column;
 				padding: 60px 30px;
-				max-width: 475px;
+				max-width: 535px;
+				box-sizing: border-box;
 				margin: auto;
 			}
 			.content-wrapper > :not(:last-child) {
@@ -150,13 +150,22 @@
 			}
 
 			.tiles-container {
-				flex: 1;
-				min-width: 0px;
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				width: calc((100% - 535px) / 2);
 				padding: 10px;
+				box-sizing: border-box;
 				display: grid;
 				grid-gap: 10px;
 				grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 				grid-template-rows: repeat(auto-fit, minmax(60px, 1fr));
+			}
+			.tiles-container.left {
+				left: 0;
+			}
+			.tiles-container.right {
+				right: 0;
 			}
 
 			.tile {
@@ -216,7 +225,7 @@
 				</symbol>
 			</defs>
 		</svg>
-		<a class='tiles-container' href='https://codepen.io/tstewart8692/pen/MdWaqQ'></a>
+		<a class='tiles-container left' href='https://codepen.io/tstewart8692/pen/MdWaqQ'></a>
 		<div class='content-wrapper'>
 			<section>
 				<h1>Tom Stewart</h1>
@@ -278,7 +287,7 @@
 				</div>
 			</section>
 		</div>
-		<a class='tiles-container' href='https://codepen.io/tstewart8692/pen/MdWaqQ'></a>
+		<a class='tiles-container right' href='https://codepen.io/tstewart8692/pen/MdWaqQ'></a>
 		<script src='/scripts/color-tiles.js' defer></script>
 	</body>
 </html>
