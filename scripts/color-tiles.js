@@ -14,16 +14,16 @@
 
   const tileElementPool = [];
 
-  updateView();
+  setupTiles();
 
   addEventListener("resize", onResize);
   setInterval(randomizeAllTileColors, CHANGE_COLORS_INTERVAL_DURATION);
 
   function onResize() {
-    updateView();
+    setupTiles();
   }
 
-  function updateView() {
+  function setupTiles() {
     const numberOfTilesToFillUpGrid = getNumberOfTilesToFillUpGrid();
     for (let i = 0; i < numberOfTilesToFillUpGrid; i++) {
       addTileToView(i);
