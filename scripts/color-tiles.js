@@ -24,15 +24,15 @@
   }
 
   function setupTiles() {
-    const numberOfTilesToFillUpGrid = getNumberOfTilesToFillUpGrid();
-    for (let i = 0; i < numberOfTilesToFillUpGrid; i++) {
+    const numberOfTilesInView = getNumberOfTilesInView();
+    for (let i = 0; i < numberOfTilesInView; i++) {
       addTileToView(i);
     }
-    removeExtraTileElementsFromView(numberOfTilesToFillUpGrid);
+    removeExtraTileElementsFromView(numberOfTilesInView);
   }
 
-  function removeExtraTileElementsFromView(numberOfTilesDisplayed) {
-    for (let i = numberOfTilesDisplayed; i < tileElementPool.length; i++) {
+  function removeExtraTileElementsFromView(numberOfTilesInView) {
+    for (let i = numberOfTilesInView; i < tileElementPool.length; i++) {
       tileElementPool[i].remove();
     }
   }
@@ -55,7 +55,7 @@
     return tile;
   }
 
-  function getNumberOfTilesToFillUpGrid() {
+  function getNumberOfTilesInView() {
     const {
       offsetWidth: contentWidth,
     } = $contentWrapper;
