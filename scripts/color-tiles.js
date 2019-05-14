@@ -14,10 +14,32 @@
 
   const tileElementPool = [];
 
-  setupTiles();
+  let randomizeAllTileColorsIntervalId;
 
-  addEventListener("resize", onResize);
-  setInterval(randomizeAllTileColors, CHANGE_COLORS_INTERVAL_DURATION);
+  const smallScreenMediaQuery = matchMedia('(max-width: 540px)');
+  smallScreenMediaQuery.addListener(onSmallScreenMediaQueryChange);
+  if (!smallScreenMediaQuery.matches) {
+    setup();
+  }
+
+  function onSmallScreenMediaQueryChange() {
+    if (smallScreenMediaQuery.matches) {
+      teardown();
+    } else {
+      setup();
+    }
+  }
+
+  function setup() {
+    setupTiles();
+    addEventListener('resize', onResize);
+    randomizeAllTileColorsIntervalId = setInterval(randomizeAllTileColors, CHANGE_COLORS_INTERVAL_DURATION);
+  }
+
+  function teardown() {
+    removeEventListener('resize', onResize);
+    clearInterval(randomizeAllTileColorsIntervalId);
+  }
 
   function onResize() {
     setupTiles();
@@ -33,7 +55,7 @@
 
   function removeExtraTileElementsFromView(numberOfTilesInView) {
     for (let i = numberOfTilesInView; i < tileElementPool.length; i++) {
-      tileElementPool[i].remove();
+      tileElementPool[i] && tileElementPool[i].remove();
     }
   }
 
@@ -60,12 +82,14 @@
       offsetWidth: contentWidth,
     } = $contentWrapper;
     const {
-      innerWidth: windowWidth,
+      clientWidth: bodyWidth,
+    } = document.body;
+    const {
       innerHeight: windowHeight,
     } = window;
 
-    if (contentWidth < windowWidth) {
-      const marginWidth = (windowWidth - contentWidth) / 2;
+    if (contentWidth < bodyWidth) {
+      const marginWidth = (bodyWidth - contentWidth) / 2;
       const numColumns = Math.floor((marginWidth - GRID_GAP) / (MIN_COL_WIDTH + GRID_GAP)) * 2;
       const numRows = Math.floor((windowHeight - GRID_GAP) / (MIN_ROW_HEIGHT + GRID_GAP));
       const numTiles = numColumns * numRows;
