@@ -1,0 +1,5 @@
+[[redirects]]
+from = 'https://laughing-haibt-230e7b.netlify.com/*'
+to = 'https://tomstew.art/:splat'
+status = 301
+force = true
