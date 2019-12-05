@@ -1,0 +1,19 @@
+{
+  "name": "tstewart15.github.io",
+  "version": "1.0.0",
+  "description": "Tom Stewart's home site",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tstewart15/tstewart15.github.io.git"
+  },
+  "author": "Tom Stewart <tstewart8692@gmail.com> (https://tomstew.art)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tstewart15/tstewart15.github.io/issues"
+  },
+  "homepage": "https://github.com/tstewart15/tstewart15.github.io#readme"
+}
