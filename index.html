@@ -139,6 +139,67 @@
 				margin-bottom: 20px;
 			}
 
+			.icon-download {
+				box-sizing: border-box;
+				position: relative;
+				display: block;
+				width: 24px;
+				height: 6px;
+				border: 3px solid;
+				border-top: 0;
+				border-bottom-left-radius: 2px;
+				border-bottom-right-radius: 2px;
+				margin-top: 17px;
+			}
+			.icon-download::after {
+				content: "";
+				display: block;
+				box-sizing: border-box;
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				border-left: 2px solid;
+				border-bottom: 2px solid;
+				transform: rotate(-45deg);
+				left: 4px;
+				bottom: 4px;
+			}
+			.icon-download::before {
+				content: "";
+				display: block;
+				box-sizing: border-box;
+				position: absolute;
+				border-radius: 3px;
+				width: 2px;
+				height: 15px;
+				background: currentColor;
+				left: 8px;
+				bottom: 5px;
+			}
+			
+			.icon-mail,
+			.icon-mail::after {
+				display: block;
+				box-sizing: border-box;
+				height: 22px;
+				border: 3px solid;
+			}
+			.icon-mail {
+				overflow: hidden;
+				position: relative;
+				width: 30px;
+				border-radius: 2px;
+			}
+			.icon-mail::after {
+				content: "";
+				position: absolute;
+				border-radius: 5px;
+				width: 22px;
+				transform: rotate(-45deg);
+				bottom: 6px;
+				left: 1px;
+			}
+
 			.link {
 				color: white;
 			}
@@ -220,14 +281,6 @@
 					<title>stackoverflow</title>
 					<path fill="#fe7a16" style="fill: var(--color6, #fe7a16)" d="M25.315 29.153v-8.539h2.845v11.385h-25.701v-11.385h2.84v8.539h20.016zM8.148 26.308h14.319v-2.849h-14.319v2.849zM8.493 19.839l13.973 2.919 0.601-2.76-13.971-2.916-0.604 2.757zM10.305 13.097l12.94 6.040 1.204-2.6-12.941-6.040-1.203 2.581v0.019zM13.925 6.717l10.956 9.14 1.812-2.16-10.955-9.137-1.8 2.156-0.013 0.001zM21.001 0l-2.328 1.725 8.54 11.472 2.328-1.725-8.54-11.472z"></path>
 				</symbol>
-				<symbol id="icon-email" viewBox="0 0 32 32">
-					<title>email</title>
-					<path fill="#222" d="M29 4h-26c-1.65 0-3 1.35-3 3v20c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-20c0-1.65-1.35-3-3-3zM12.461 17.199l-8.461 6.59v-15.676l8.461 9.086zM5.512 8h20.976l-10.488 7.875-10.488-7.875zM12.79 17.553l3.21 3.447 3.21-3.447 6.58 8.447h-19.579l6.58-8.447zM19.539 17.199l8.461-9.086v15.676l-8.461-6.59z"></path>
-				</symbol>
-				<symbol id="icon-download" viewBox="0 0 32 32">
-					<title>download</title>
-					<path fill="#222" d="M28 16h-5l-7 7-7-7h-5l-4 8v2h32v-2l-4-8zM0 28h32v2h-32v-2zM18 10v-8h-4v8h-7l9 9 9-9h-7z"></path>
-				</symbol>
 			</defs>
 		</svg>
 		<div class='tiles-container left'></div>
@@ -238,11 +291,11 @@
 				<p>Hi, I'm Tom. 👋 I'm a Penn State grad with a BS in Computer Engineering. 🦁 I love problem-solving and creating things to help other people solve their problems. 🤓 Currently, I'm a web developer, passionate about delivering performant, accessible, and aesthetic experiences. 🔥</p>
 				<div class='button-container'>
 					<a class='button' href='mailto:tstewart8692@gmail.com'>
-						<svg class='button-svg'><use xlink:href="#icon-email"></use></svg>
+						<span class="icon-mail" role="img" aria-label="envelope"></span>
 						<span class='button-label'>email me</span>
 					</a>
 					<a class='button' href='/resume.pdf'>
-						<svg class='button-svg'><use xlink:href="#icon-download"></use></svg>
+						<span class="icon-download" role="img" aria-label="download"></span>
 						<span class='button-label'>download resume</span>
 					</a>
 				</div>
