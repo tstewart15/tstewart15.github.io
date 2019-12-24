@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<meta name="msapplication-TileColor" content="#222222">
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name='theme-color' content='#222222'>
+		<meta name='description' content='Tom Stewart, Web Developer'>
+		<title>Tom Stewart</title>
+		<style>
+			a:focus {
+				outline: 1px solid white;
+				outline-offset: 2px;
+			}
+
+			body {
+				margin: 0;
+				font-family: 'Fira Sans', sans-serif;
+				font-size: 20px;
+				background-color: #222;
+				color: white;
+			}
+
+			.button-container {
+				align-self: stretch;
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+				grid-gap: 4px;
+			}
+
+			.button {
+				display: inline-flex;
+				align-items: center;
+				color: #222;
+				background-color: white;
+				padding: 5px 10px;
+				height: 40px;
+				box-sizing: border-box;
+				font-weight: 500;
+				text-decoration: none;
+			}
+			.button:hover {
+				background-color: #00e6ae;
+			}
+			.button:focus {
+				outline: 1px solid white;
+				outline-offset: 2px;
+			}
+			.button::-moz-focus-inner {
+				border: 0;
+			}
+			.button > :not(:last-child) {
+				margin-right: 10px;
+			}
+			.button-label {
+				flex: 1;
+				min-width: 0;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+			.button-svg {
+				height: 22px;
+				width: 22px;
+				flex-shrink: 0;
+			}
+
+			.content-wrapper {
+				display: flex;
+				flex-direction: column;
+				padding: 50px 30px 60px;
+				max-width: 535px;
+				box-sizing: border-box;
+				margin: auto;
+			}
+			.content-wrapper > :not(:last-child) {
+				margin-bottom: 60px;
+			}
+
+			dd, dl, dt {
+				margin: 0;
+			}
+			dt {
+				margin-bottom: 10px;
+			}
+			dt:not(:first-child) {
+				margin-top: 30px;
+			}
+			dd:not(:last-child) {
+				margin-bottom: 15px;
+			}
+
+			h1 {
+				font-size: 55px;
+				font-weight: 500;
+				margin: 0;
+				text-align: center;
+				line-height: 1;
+				color: white;
+				padding: 10px;
+				border-bottom: 5px solid white;
+			}
+
+			h2 {
+				font-size: 35px;
+				font-weight: 500;
+				margin: 0;
+				text-align: center;
+				line-height: 1;
+			}
+
+			h3 {
+				font-size: 28px;
+				font-weight: 400;
+				margin: 0;
+				line-height: 1.3;
+			}
+
+			header {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			header > :not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			.icon-download {
+				box-sizing: border-box;
+				position: relative;
+				display: block;
+				width: 24px;
+				height: 6px;
+				border: 3px solid;
+				border-top: 0;
+				border-bottom-left-radius: 2px;
+				border-bottom-right-radius: 2px;
+				margin-top: 17px;
+			}
+			.icon-download::after {
+				content: "";
+				display: block;
+				box-sizing: border-box;
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				border-left: 2px solid;
+				border-bottom: 2px solid;
+				transform: rotate(-45deg);
+				left: 4px;
+				bottom: 4px;
+			}
+			.icon-download::before {
+				content: "";
+				display: block;
+				box-sizing: border-box;
+				position: absolute;
+				border-radius: 3px;
+				width: 2px;
+				height: 15px;
+				background: currentColor;
+				left: 8px;
+				bottom: 5px;
+			}
+			
+			.icon-mail,
+			.icon-mail::after {
+				display: block;
+				box-sizing: border-box;
+				height: 22px;
+				border: 3px solid;
+			}
+			.icon-mail {
+				overflow: hidden;
+				position: relative;
+				width: 30px;
+				border-radius: 2px;
+			}
+			.icon-mail::after {
+				content: "";
+				position: absolute;
+				border-radius: 5px;
+				width: 22px;
+				transform: rotate(-45deg);
+				bottom: 6px;
+				left: 1px;
+			}
+
+			.link {
+				color: white;
+			}
+			.link:hover {
+				color: #00e6ae;
+			}
+
+			p {
+				margin: 0;
+				line-height: 1.3;
+			}
+
+			.profile-image {
+				border-radius: 50%;
+				border: 3px solid white;
+			}
+
+			section {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			section > :not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			.tiles-container {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				width: calc((100% - 535px) / 2);
+				padding: 10px;
+				box-sizing: border-box;
+				display: grid;
+				grid-gap: 10px;
+				grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+				grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
+			}
+			.tiles-container.left {
+				left: 0;
+			}
+			.tiles-container.right {
+				right: 0;
+			}
+
+			.tile {
+				transition: background-color 1s;
+			}
+
+			@media (max-width: 540px) {
+				.content-wrapper {
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+				.tiles-container {
+					display: none;
+				}
+			}
+		</style>
+		<link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,500' rel='stylesheet'>
+		<link rel='manifest' href='/manifest.json'>
+	</head>
+	<body>
+		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<defs>
+				<symbol id="icon-codepen" viewBox="0 0 32 32">
+					<title>codepen</title>
+					<path d="M32 10.909l-0.024-0.116-0.023-0.067c-0.013-0.032-0.024-0.067-0.040-0.1-0.004-0.024-0.020-0.045-0.027-0.067l-0.047-0.089-0.040-0.067-0.059-0.080-0.061-0.060-0.080-0.060-0.061-0.040-0.080-0.059-0.059-0.053-0.020-0.027-14.607-9.772c-0.463-0.309-1.061-0.309-1.523 0l-14.805 9.883-0.051 0.053-0.067 0.075-0.049 0.060-0.067 0.080c-0.027 0.023-0.040 0.040-0.040 0.061l-0.067 0.080-0.027 0.080c-0.027 0.013-0.027 0.053-0.040 0.093l-0.013 0.067c-0.025 0.041-0.025 0.081-0.025 0.121v9.996c0 0.059 0.004 0.12 0.013 0.18l0.013 0.061c0.007 0.040 0.013 0.080 0.027 0.115l0.020 0.067c0.013 0.036 0.021 0.071 0.036 0.1l0.029 0.067c0 0.013 0.020 0.053 0.040 0.080l0.040 0.053c0.020 0.013 0.040 0.053 0.060 0.080l0.040 0.053 0.053 0.053c0.013 0.017 0.013 0.040 0.040 0.040l0.080 0.056 0.053 0.040 0.013 0.019 14.627 9.773c0.219 0.16 0.5 0.217 0.76 0.217s0.52-0.080 0.76-0.24l14.877-9.875 0.069-0.077 0.044-0.060 0.053-0.080 0.040-0.067 0.040-0.093 0.021-0.069 0.040-0.103 0.020-0.060 0.040-0.107v-10c0-0.067 0-0.127-0.021-0.187l-0.019-0.060 0.059 0.004zM16.013 19.283l-4.867-3.253 4.867-3.256 4.867 3.253-4.867 3.253zM14.635 10.384l-5.964 3.987-4.817-3.221 10.781-7.187v6.424zM6.195 16.028l-3.443 2.307v-4.601l3.443 2.301zM8.671 17.695l5.964 3.987v6.427l-10.781-7.188 4.824-3.223v-0.005zM17.387 21.681l5.965-3.973 4.817 3.227-10.783 7.187v-6.427zM25.827 16.041l3.444-2.293v4.608l-3.444-2.307zM23.353 14.388l-5.964-3.988v-6.44l10.78 7.187-4.816 3.224z"></path>
+				</symbol>
+				<symbol id="icon-github" viewBox="0 0 32 32">
+					<title>github</title>
+					<path d="M16 0.396c-8.84 0-16 7.164-16 16 0 7.071 4.584 13.067 10.94 15.18 0.8 0.151 1.093-0.344 1.093-0.769 0-0.38-0.013-1.387-0.020-2.72-4.451 0.965-5.389-2.147-5.389-2.147-0.728-1.847-1.78-2.34-1.78-2.34-1.449-0.992 0.112-0.972 0.112-0.972 1.607 0.112 2.451 1.648 2.451 1.648 1.427 2.447 3.745 1.74 4.66 1.331 0.144-1.035 0.556-1.74 1.013-2.14-3.553-0.4-7.288-1.776-7.288-7.907 0-1.747 0.62-3.173 1.647-4.293-0.18-0.404-0.72-2.031 0.14-4.235 0 0 1.34-0.429 4.4 1.64 1.28-0.356 2.64-0.532 4-0.54 1.36 0.008 2.72 0.184 4 0.54 3.040-2.069 4.38-1.64 4.38-1.64 0.86 2.204 0.32 3.831 0.16 4.235 1.020 1.12 1.64 2.547 1.64 4.293 0 6.147-3.74 7.5-7.3 7.893 0.56 0.48 1.080 1.461 1.080 2.96 0 2.141-0.020 3.861-0.020 4.381 0 0.42 0.28 0.92 1.1 0.76 6.401-2.099 10.981-8.099 10.981-15.159 0-8.836-7.164-16-16-16z"></path>
+				</symbol>
+				<symbol id="icon-linkedin" viewBox="0 0 32 32">
+					<title>linkedin</title>
+					<path fill="#0077b5" style="fill: var(--color3, #0077b5)" d="M27.263 27.269h-4.739v-7.425c0-1.771-0.036-4.049-2.469-4.049-2.471 0-2.848 1.927-2.848 3.919v7.556h-4.739v-15.269h4.552v2.081h0.061c0.636-1.2 2.183-2.467 4.493-2.467 4.801 0 5.689 3.16 5.689 7.273v8.381zM7.116 9.911c-1.525 0-2.751-1.235-2.751-2.753 0-1.517 1.227-2.751 2.751-2.751 1.52 0 2.752 1.233 2.752 2.751 0 1.519-1.233 2.753-2.752 2.753zM9.492 27.269h-4.752v-15.269h4.752v15.269zM29.633 0h-27.272c-1.305 0-2.361 1.032-2.361 2.305v27.389c0 1.275 1.056 2.305 2.361 2.305h27.268c1.304 0 2.371-1.031 2.371-2.305v-27.389c0-1.273-1.067-2.305-2.371-2.305h0.004z"></path>
+				</symbol>
+				<symbol id="icon-stackoverflow" viewBox="0 0 32 32">
+					<title>stackoverflow</title>
+					<path fill="#fe7a16" style="fill: var(--color6, #fe7a16)" d="M25.315 29.153v-8.539h2.845v11.385h-25.701v-11.385h2.84v8.539h20.016zM8.148 26.308h14.319v-2.849h-14.319v2.849zM8.493 19.839l13.973 2.919 0.601-2.76-13.971-2.916-0.604 2.757zM10.305 13.097l12.94 6.040 1.204-2.6-12.941-6.040-1.203 2.581v0.019zM13.925 6.717l10.956 9.14 1.812-2.16-10.955-9.137-1.8 2.156-0.013 0.001zM21.001 0l-2.328 1.725 8.54 11.472 2.328-1.725-8.54-11.472z"></path>
+				</symbol>
+			</defs>
+		</svg>
+		<div class='tiles-container left'></div>
+		<div class='content-wrapper'>
+			<section>
+				<h1>Tom Stewart</h1>
+				<img src='/profile.jpg' alt='Tom Stewart' height='200' width='200' class='profile-image' />
+				<p>Hi, I'm Tom. 👋 I'm a Penn State grad with a BS in Computer Engineering. 🦁 I love problem-solving and creating things to help other people solve their problems. 🤓 Currently, I'm a web developer, passionate about delivering performant, accessible, and aesthetic experiences. 🔥</p>
+				<div class='button-container'>
+					<a class='button' href='mailto:tstewart8692@gmail.com'>
+						<span class="icon-mail" role="img" aria-label="envelope"></span>
+						<span class='button-label'>email me</span>
+					</a>
+					<a class='button' href='/resume.pdf'>
+						<span class="icon-download" role="img" aria-label="download"></span>
+						<span class='button-label'>download resume</span>
+					</a>
+				</div>
+			</section>
+			<section>
+				<h2>Projects</h2>
+				<dl>
+					<dt><h3><a class="link" href='https://www.linkedin.com/learning'>LinkedIn Learning</a></h3></dt>
+					<dd><p><i>Web developer&nbsp;&nbsp;&middot;&nbsp;&nbsp;January 2019 - Present</i></p></dd>
+					<dd><p>LinkedIn Learning offers learners an extensive catalog of video courses taught by industry experts in software, creative, and business skills, helping users learn job-ready, in-demand skills.</p></dd>
+					<dt><h3><a class="link" href='https://teacheradvisor.org'>Teacher Advisor With Watson</a></h3></dt>
+					<dd><p><i>Web developer&nbsp;&nbsp;&middot;&nbsp;&nbsp;February 2017 - December 2018</i></p></dd>
+					<dd><p>Teacher Advisor is a free tool for teachers to discover lesson plans, strategies, and classroom activities, utilizing an AI-powered search.</p></dd>
+					<dt><h3><a class="link" href='https://www.ibm.com/us-en/marketplace/ibm-tririga'>IBM TRIRIGA</a></h3></dt>
+					<dd><p><i>Web UI developer&nbsp;&nbsp;&middot;&nbsp;&nbsp;June 2015 - February 2017</i></p></dd>
+					<dd><p><i>Application developer&nbsp;&nbsp;&middot;&nbsp;&nbsp;June 2014 - June 2015</i></p></dd>
+					<dd><p>TRIRIGA is an application builder used by businesses for facility, employee, and energy management.</p></dd>
+				</dl>
+			</section>
+			<section>
+				<h2>Socials</h2>
+				<div class='button-container'>
+					<a class='button' href='https://codepen.io/tstewart8692/'>
+						<svg class='button-svg'><use xlink:href="#icon-codepen"></use></svg>
+						<span class='button-label'>codepen</span>
+					</a>
+					<a class='button' href='https://github.com/tstewart15'>
+						<svg class='button-svg'><use xlink:href="#icon-github"></use></svg>
+						<span class='button-label'>github</span>
+					</a>
+					<a class='button' href='https://www.linkedin.com/in/tom-stewart-asdf/'>
+						<svg class='button-svg'><use xlink:href="#icon-linkedin"></use></svg>
+						<span class='button-label'>linkedin</span>
+					</a>
+					<a class='button' href='https://stackoverflow.com/users/2445861/tjs352'>
+						<svg class='button-svg'><use xlink:href="#icon-stackoverflow"></use></svg>
+						<span class='button-label'>stackoverflow</span>
+					</a>
+				</div>
+			</section>
+		</div>
+		<div class='tiles-container right'></div>
+		<script src='/scripts/color-tiles.js' defer></script>
+	</body>
+</html>
