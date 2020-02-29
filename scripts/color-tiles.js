@@ -10,11 +10,8 @@
   const GRID_GAP = 10;
   const MIN_COL_WIDTH = 120;
   const MIN_ROW_HEIGHT = 80;
-  const CHANGE_COLORS_INTERVAL_DURATION = 8000;
 
   const tileElementPool = [];
-
-  let randomizeAllTileColorsIntervalId;
 
   const smallScreenMediaQuery = matchMedia('(max-width: 540px)');
   smallScreenMediaQuery.addListener(onSmallScreenMediaQueryChange);
@@ -33,12 +30,10 @@
   function setup() {
     setupTiles();
     addEventListener('resize', onResize);
-    randomizeAllTileColorsIntervalId = setInterval(randomizeAllTileColors, CHANGE_COLORS_INTERVAL_DURATION);
   }
 
   function teardown() {
     removeEventListener('resize', onResize);
-    clearInterval(randomizeAllTileColorsIntervalId);
   }
 
   function onResize() {
@@ -72,7 +67,7 @@
 
   function createTileElement() {
     const tile = document.createElement('div');
-    tile.style.backgroundColor = getRandomCSSColor();
+    randomizeTileColor(tile);
     tile.classList.add('tile');
     return tile;
   }
@@ -96,12 +91,6 @@
       return numTiles;
     } else {
       return 0;
-    }
-  }
-
-  function randomizeAllTileColors() {
-    for (let tile of tileElementPool) {
-      randomizeTileColor(tile);
     }
   }
 
