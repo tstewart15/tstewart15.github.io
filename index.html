@@ -89,6 +89,8 @@
 				max-width: 535px;
 				box-sizing: border-box;
 				margin: auto;
+				background-color: rgba(34, 34, 34, 0.9);
+				box-shadow: 0 0 100px 70px #222;
 			}
 			.content-wrapper > :not(:last-child) {
 				margin-bottom: 60px;
@@ -169,27 +171,23 @@
 				margin-bottom: 20px;
 			}
 
-			.tiles-container {
+			.starbug {
 				position: fixed;
+				z-index: -2;
+			}
+			.starbug-curtain {
+				opacity: 1;
+				position: fixed;
+				z-index: -1;
 				top: 0;
 				bottom: 0;
-				width: calc((100% - 535px) / 2);
-				padding: 10px;
-				box-sizing: border-box;
-				display: grid;
-				grid-gap: 10px;
-				grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-				grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
-			}
-			.tiles-container.left {
 				left: 0;
-			}
-			.tiles-container.right {
 				right: 0;
+				background-color: #222;
+				transition: opacity 1s;
 			}
-
-			.tile {
-				transition: background-color 1s;
+			.starbug-curtain.open {
+				opacity: 0;
 			}
 
 			@media (max-width: 540px) {
@@ -197,15 +195,13 @@
 					padding-left: 10px;
 					padding-right: 10px;
 				}
-				.tiles-container {
-					display: none;
-				}
 			}
 		</style>
 		<link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,500' rel='stylesheet'>
 		<link rel='manifest' href='/manifest.json'>
 	</head>
 	<body>
+		<div class="starbug-curtain"></div>
 		<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			<defs>
 				<symbol id="icon-codepen" viewBox="0 0 32 32">
@@ -226,7 +222,6 @@
 				</symbol>
 			</defs>
 		</svg>
-		<div class='tiles-container left'></div>
 		<div class='content-wrapper'>
 			<section>
 				<h1>Tom Stewart</h1>
@@ -280,7 +275,40 @@
 				</div>
 			</section>
 		</div>
-		<div class='tiles-container right'></div>
-		<script src='/scripts/color-tiles.js' defer></script>
+    <template id="starbug0">
+      <svg class="starbug" height="4" width="4">
+        <rect height="4" width="4"></rect>
+      </svg>
+    </template>
+    <template id="starbug1">
+      <svg class="starbug" height="2" width="2">
+        <rect height="2" width="2"></rect>
+      </svg>
+    </template>
+    <template id="starbug2">
+      <svg class="starbug" height="8" width="8">
+        <line
+          x1="0"
+          y1="4"
+          x2="8"
+          y2="4"
+          style="stroke-width:2"
+        ></line>
+        <line
+          y1="0"
+          x1="4"
+          y2="8"
+          x2="4"
+          style="stroke-width:2"
+        ></line>
+      </svg>
+    </template>
+    <template id="starbug3">
+      <svg class="starbug" height="6" width="6">
+        <line x1="0" y1="0" x2="6" y2="6"></line>
+        <line y1="0" x1="6" y2="6" x2="0"></line>
+      </svg>
+    </template>
+		<script src='/scripts/starbugs.js' defer></script>
 	</body>
 </html>
