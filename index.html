@@ -29,7 +29,7 @@
 
 			body {
 				margin: 0;
-				font-family: 'Fira Sans', sans-serif;
+				font-family: 'Fira Code', monospace;
 				font-size: 20px;
 				background-color: #222;
 				color: white;
@@ -86,11 +86,9 @@
 				display: flex;
 				flex-direction: column;
 				padding: 50px 30px 60px;
-				max-width: 535px;
+				max-width: 600px;
 				box-sizing: border-box;
 				margin: auto;
-				background-color: rgba(34, 34, 34, 0.9);
-				backdrop-filter: blur(1px);
 			}
 			.content-wrapper > :not(:last-child) {
 				margin-bottom: 60px;
@@ -197,7 +195,7 @@
 				}
 			}
 		</style>
-		<link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,500' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Fira+Code:400,500' rel='stylesheet'>
 		<link rel='manifest' href='/manifest.json'>
 	</head>
 	<body>
@@ -214,11 +212,11 @@
 				</symbol>
 				<symbol id="icon-linkedin" viewBox="0 0 32 32">
 					<title>linkedin</title>
-					<path fill="#0077b5" style="fill: var(--color3, #0077b5)" d="M27.263 27.269h-4.739v-7.425c0-1.771-0.036-4.049-2.469-4.049-2.471 0-2.848 1.927-2.848 3.919v7.556h-4.739v-15.269h4.552v2.081h0.061c0.636-1.2 2.183-2.467 4.493-2.467 4.801 0 5.689 3.16 5.689 7.273v8.381zM7.116 9.911c-1.525 0-2.751-1.235-2.751-2.753 0-1.517 1.227-2.751 2.751-2.751 1.52 0 2.752 1.233 2.752 2.751 0 1.519-1.233 2.753-2.752 2.753zM9.492 27.269h-4.752v-15.269h4.752v15.269zM29.633 0h-27.272c-1.305 0-2.361 1.032-2.361 2.305v27.389c0 1.275 1.056 2.305 2.361 2.305h27.268c1.304 0 2.371-1.031 2.371-2.305v-27.389c0-1.273-1.067-2.305-2.371-2.305h0.004z"></path>
+					<path fill="#0077b5" style="fill: #0077b5" d="M27.263 27.269h-4.739v-7.425c0-1.771-0.036-4.049-2.469-4.049-2.471 0-2.848 1.927-2.848 3.919v7.556h-4.739v-15.269h4.552v2.081h0.061c0.636-1.2 2.183-2.467 4.493-2.467 4.801 0 5.689 3.16 5.689 7.273v8.381zM7.116 9.911c-1.525 0-2.751-1.235-2.751-2.753 0-1.517 1.227-2.751 2.751-2.751 1.52 0 2.752 1.233 2.752 2.751 0 1.519-1.233 2.753-2.752 2.753zM9.492 27.269h-4.752v-15.269h4.752v15.269zM29.633 0h-27.272c-1.305 0-2.361 1.032-2.361 2.305v27.389c0 1.275 1.056 2.305 2.361 2.305h27.268c1.304 0 2.371-1.031 2.371-2.305v-27.389c0-1.273-1.067-2.305-2.371-2.305h0.004z"></path>
 				</symbol>
 				<symbol id="icon-stackoverflow" viewBox="0 0 32 32">
 					<title>stackoverflow</title>
-					<path fill="#fe7a16" style="fill: var(--color6, #fe7a16)" d="M25.315 29.153v-8.539h2.845v11.385h-25.701v-11.385h2.84v8.539h20.016zM8.148 26.308h14.319v-2.849h-14.319v2.849zM8.493 19.839l13.973 2.919 0.601-2.76-13.971-2.916-0.604 2.757zM10.305 13.097l12.94 6.040 1.204-2.6-12.941-6.040-1.203 2.581v0.019zM13.925 6.717l10.956 9.14 1.812-2.16-10.955-9.137-1.8 2.156-0.013 0.001zM21.001 0l-2.328 1.725 8.54 11.472 2.328-1.725-8.54-11.472z"></path>
+					<path fill="#fe7a16" style="fill: #fe7a16" d="M25.315 29.153v-8.539h2.845v11.385h-25.701v-11.385h2.84v8.539h20.016zM8.148 26.308h14.319v-2.849h-14.319v2.849zM8.493 19.839l13.973 2.919 0.601-2.76-13.971-2.916-0.604 2.757zM10.305 13.097l12.94 6.040 1.204-2.6-12.941-6.040-1.203 2.581v0.019zM13.925 6.717l10.956 9.14 1.812-2.16-10.955-9.137-1.8 2.156-0.013 0.001zM21.001 0l-2.328 1.725 8.54 11.472 2.328-1.725-8.54-11.472z"></path>
 				</symbol>
 			</defs>
 		</svg>
@@ -242,14 +240,14 @@
 				<h2>Projects</h2>
 				<dl>
 					<dt><h3><a class="link" href='https://www.linkedin.com/learning'>LinkedIn Learning</a></h3></dt>
-					<dd><p><i>Web developer&nbsp;&nbsp;&middot;&nbsp;&nbsp;January 2019 - Present</i></p></dd>
+					<dd><p><i>Web developer &middot; January 2019 - Present</i></p></dd>
 					<dd><p>LinkedIn Learning offers learners an extensive catalog of video courses taught by industry experts in software, creative, and business skills, helping users learn job-ready, in-demand skills.</p></dd>
 					<dt><h3><a class="link" href='https://teacheradvisor.org'>Teacher Advisor With Watson</a></h3></dt>
-					<dd><p><i>Web developer&nbsp;&nbsp;&middot;&nbsp;&nbsp;February 2017 - December 2018</i></p></dd>
+					<dd><p><i>Web developer &middot; February 2017 - December 2018</i></p></dd>
 					<dd><p>Teacher Advisor is a free tool for teachers to discover lesson plans, strategies, and classroom activities, utilizing an AI-powered search.</p></dd>
 					<dt><h3><a class="link" href='https://www.ibm.com/us-en/marketplace/ibm-tririga'>IBM TRIRIGA</a></h3></dt>
-					<dd><p><i>Web UI developer&nbsp;&nbsp;&middot;&nbsp;&nbsp;June 2015 - February 2017</i></p></dd>
-					<dd><p><i>Application developer&nbsp;&nbsp;&middot;&nbsp;&nbsp;June 2014 - June 2015</i></p></dd>
+					<dd><p><i>Web developer &middot; June 2015 - February 2017</i></p></dd>
+					<dd><p><i>Application developer &middot; June 2014 - June 2015</i></p></dd>
 					<dd><p>TRIRIGA is an application builder used by businesses for facility, employee, and energy management.</p></dd>
 				</dl>
 			</section>
@@ -275,7 +273,7 @@
 				</div>
 			</section>
 		</div>
-		<template id="starbug0">
+		<!-- <template id="starbug0">
 			<svg class="starbug" height="4" width="4">
 				<rect height="4" width="4"></rect>
 			</svg>
@@ -309,6 +307,6 @@
 				<line y1="0" x1="6" y2="6" x2="0"></line>
 			</svg>
 		</template>
-		<script src='/scripts/starbugs.js' defer></script>
+		<script src='/scripts/starbugs.js' defer></script> -->
 	</body>
 </html>
